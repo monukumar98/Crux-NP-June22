@@ -10,7 +10,7 @@ public class Finding_Cb_Number {
 	}
 
 	public static void printSubtring(String str) {
-		boolean [] visited = new boolean[str.length()];
+		boolean[] visited = new boolean[str.length()];
 		int count = 0;
 		for (int len = 1; len <= str.length(); len++) {
 			for (int j = len; j <= str.length(); j++) {
@@ -18,18 +18,28 @@ public class Finding_Cb_Number {
 				String s = str.substring(i, j);
 				// Integer.parseInt(s) String ko Int me convert krega
 				// Long.parseLong(s)String ko long me convert krega
-				if (CBnumber(Long.parseLong(s)) == true ) {
+				if (CBnumber(Long.parseLong(s)) == true && isvisited(visited, i, j) == true) {
 					count++;
-					for (int k = i; k <j; k++) {
-						visited[k]=true;
-						
+					for (int k = i; k < j; k++) {
+						visited[k] = true;
+
 					}
 				}
 
 			}
 
 		}
+		System.out.println(count);
 
+	}
+
+	public static boolean isvisited(boolean[] visted, int i, int j) {
+		for (int k = i; k < j; k++) {
+			if (visted[k] == true) {
+				return false;
+			}
+		}
+		return true;
 	}
 
 	public static boolean CBnumber(long n) {
