@@ -89,9 +89,32 @@ public class TimeandSpaceComp {
 			for (int j = 1; j <= i * i; j++) {
 				for (int k = 1; k <= n / 2; k++) {
 					System.out.println("hey");
+					// O(N^4)
 				}
 			}
 		}
+		
+		for(i=n/2; i<=n; i++) {
+			for(int j=1; j<=n/2; j++) {
+				for(int k=1; k<=n; k=k*2) {
+					System.out.println("hey");
+					
+					// N^logn
+				}
+			}
+		}
+		
+		for(i=1; i<=n; i++) {
+			for(int j=1; j<=n; j+=i) {
+				System.out.println("hey");
+				// O(n*log(N)
+			}
+		}
+		
+
+		// bubble
+		// Selection
+		// instersion
 
 	}
 

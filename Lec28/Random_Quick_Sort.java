@@ -1,8 +1,6 @@
-package Lec25;
+package Lec28;
 
-import java.util.Random;
-
-public class Quick_Sort {
+public class Random_Quick_Sort {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -25,7 +23,7 @@ public class Quick_Sort {
 	}
 
 	public static int partition(int[] arr, int si, int ei) {
-		random(arr, si, ei);
+
 		int item = arr[ei];
 		int pi = si;
 		for (int i = si; i < ei; i++) {
@@ -41,17 +39,6 @@ public class Quick_Sort {
 		arr[ei] = arr[pi];
 		arr[pi] = t;
 		return pi;
-
-	}
-
-	public static void random(int[] arr, int lo, int hi) {
-		// TODO Auto-generated method stub
-		Random rn = new Random();
-
-		int r = rn.nextInt(hi - lo + 1) + lo;
-		int temp = arr[r];
-		arr[r] = arr[hi];
-		arr[hi] = temp;
 
 	}
 }
