@@ -24,19 +24,34 @@ public class Stack {
 		return top == arr.length - 1;
 	}
 
-	public void push(int item) {
+	public void push(int item) throws Exception {
+		if (isfull() == true) {
 
+			throw new Exception("Stack full hai");
+
+		}
 		this.top++;
 		this.arr[this.top] = item;
 	}
 
-	public int pop() {
+	public int pop() throws Exception {
+		if (isEmpty() == true) {
+
+			throw new Exception("Stack empty hai");
+
+		}
+
 		int rv = arr[top];
 		top--;
 		return rv;
 	}
 
-	public int peek() {
+	public int peek() throws Exception {
+		if (isEmpty() == true) {
+
+			throw new Exception("Stack empty hai");
+
+		}
 		int rv = arr[top];
 
 		return rv;
