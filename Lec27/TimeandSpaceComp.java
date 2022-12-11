@@ -55,7 +55,7 @@ public class TimeandSpaceComp {
 			n /= 2;
 			n /= 3;
 		}
-
+		int k = 1;
 		while (i <= n) {
 			System.out.println("Hey");
 			// (O)(N/K)
@@ -84,33 +84,32 @@ public class TimeandSpaceComp {
 				// O(N^2)
 			}
 		}
-		
+
 		for (i = 1; i <= n; i++) {
 			for (int j = 1; j <= i * i; j++) {
-				for (int k = 1; k <= n / 2; k++) {
+				for (k = 1; k <= n / 2; k++) {
 					System.out.println("hey");
 					// O(N^4)
 				}
 			}
 		}
-		
-		for(i=n/2; i<=n; i++) {
-			for(int j=1; j<=n/2; j++) {
-				for(int k=1; k<=n; k=k*2) {
+
+		for (i = n / 2; i <= n; i++) {
+			for (int j = 1; j <= n / 2; j++) {
+				for (k = 1; k <= n; k = k * 2) {
 					System.out.println("hey");
-					
+
 					// N^logn
 				}
 			}
 		}
-		
-		for(i=1; i<=n; i++) {
-			for(int j=1; j<=n; j+=i) {
+
+		for (i = 1; i <= n; i++) {
+			for (int j = 1; j <= n; j += i) {
 				System.out.println("hey");
 				// O(n*log(N)
 			}
 		}
-		
 
 		// bubble
 		// Selection
